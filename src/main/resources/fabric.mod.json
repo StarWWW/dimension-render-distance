@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "dimrender",
+  "version": "${version}",
+  "name": "Dimension Render Distance",
+  "description": "Separate render distance and simulation distance for the Overworld, the Nether, the End and any other dimension. Switches automatically when you change dimension.",
+  "license": "MIT",
+  "authors": ["StarWWW"],
+  "contact": {
+    "homepage": "https://github.com/StarWWW/dimension-render-distance",
+    "sources": "https://github.com/StarWWW/dimension-render-distance",
+    "issues": "https://github.com/StarWWW/dimension-render-distance/issues"
+  },
+  "icon": "assets/dimrender/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dimrender.DimRenderMod"
+    ],
+    "modmenu": [
+      "dimrender.compat.ModMenuIntegration"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.0",
+    "minecraft": "~26.1",
+    "java": ">=25",
+    "fabric-api": ">=${fabric_api_version}"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}
