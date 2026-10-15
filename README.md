@@ -41,7 +41,7 @@ Bu Minecraft 26.1.2 jar'ını üretir. 26.2 için:
 gradlew build -Pmc=26.2
 ```
 
-Hazır jar'lar `build/libs/` klasörüne çıkar (`-sources` olmayan dosya), adında Minecraft sürümü yazar: `dimrender-<sürüm>+26.1.2.jar` ve `dimrender-<sürüm>+26.2.jar`. Oyununun sürümüne uyanı kur. `gradlew build` ayrıca `src/test` altındaki JUnit testlerini de çalıştırır.
+Hazır jar'lar `build/libs/` klasörüne çıkar (`-sources` olmayan dosya), adında Minecraft sürümü yazar: `dimrender-<sürüm>+26.1.2.jar` ve `dimrender-<sürüm>+26.2.jar`. Oyununun sürümüne uyanı kur. Her derleme jar'ı ayrıca ana klasördeki `builds/<minecraft sürümü>/` klasörüne kopyalar ve oradaki eski sürümünü siler; ana klasördeki `build-all.bat` bütün modları her sürüm için tek seferde derler. `gradlew build` ayrıca `src/test` altındaki JUnit testlerini de çalıştırır.
 
 ### Desteklenen Minecraft sürümleri
 
