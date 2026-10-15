@@ -1,6 +1,7 @@
 package dimrender;
 
 import dimrender.client.DimRenderScreen;
+import dimrender.compat.Compat;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
@@ -31,7 +32,7 @@ public class DimRenderMod implements ClientModInitializer {
         KeyMappingHelper.registerKeyMapping(SETTINGS_KEY);
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (SETTINGS_KEY.consumeClick()) {
-                client.setScreen(new DimRenderScreen(client.screen));
+                Compat.setScreen(client, new DimRenderScreen(Compat.screen(client)));
             }
             try {
                 String dimension = client.level == null ? null : client.level.dimension().identifier().toString();
